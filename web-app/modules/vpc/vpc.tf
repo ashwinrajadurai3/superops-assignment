@@ -8,7 +8,6 @@ resource "aws_vpc" "main" {
   }
 }
 
-#
 
 # Private & Public subnets
 resource "aws_subnet" "public_subnets" {
@@ -106,7 +105,6 @@ resource "aws_eip" "for_nat_gw" {
   domain = "vpc"
 
   #instance                  = aws_instance.foo.id
-  associate_with_private_ip = "10.0.0.12"
+  associate_with_private_ip = var.associate_with_private_ip
   depends_on                = [aws_internet_gateway.gw]
 }
-

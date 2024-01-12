@@ -15,3 +15,7 @@ variable "azs" {
   description = "Availability Zones"
   default     = ["us-east-1a", "us-east-1b"]
 }
+
+variable "associate_with_private_ip" {
+  default = "10.0.0.12"
+}
